@@ -1,9 +1,60 @@
+/* Default */
 body{
     height: 100vh;
     background: linear-gradient(to bottom, #128C7E 0 15%, #ECE5DD 15% 100%);
 }
 
+/* Utils */
+.bg-chat{
+    background-image: url('../img/mine.jpg');
+}
 
+.clickable{
+    cursor: pointer;
+}
+
+/* Main */
+
+#root .container{
+    height: 90%;
+}
 main {
-    height: 90vh;
+    height: 100%;
+}
+
+#chat header,
+#chat footer{
+    height: 70px;    
+}
+
+.media{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.media figure{
+    height: 70px;
+    padding: .5rem;
+}
+
+.media img{
+    height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.media .media-text{
+    margin-left: .5rem;
+}
+
+.media .media-icon{
+    width: 50px;
+    height: 50px;
+    margin-left: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
 }
