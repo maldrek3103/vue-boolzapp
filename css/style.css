@@ -1,0 +1,13 @@
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom, #128C7E 0 15%, #ECE5DD 15% 100%);
+}
+
+section.contacts{
+
+    background-color: white;
+}
+
+section.chat{
+    background-color: white;
+}
