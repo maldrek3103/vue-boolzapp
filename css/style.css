@@ -8,12 +8,25 @@ body{
 .bg-chat{
     background-image: url('../img/mine.jpg');
 }
-
+.bg-lightblue{
+    background-color: #34B7F1;
+}
 .clickable{
     cursor: pointer;
 }
 
 /* Main */
+ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+li:hover{
+    background-color: #ccc;
+}
 
 #root .container{
     height: 90%;
@@ -36,6 +49,7 @@ main {
 .media figure{
     height: 70px;
     padding: .5rem;
+    margin-bottom: 0;
 }
 
 .media img{
@@ -57,4 +71,8 @@ main {
     justify-content: center;
     background-color: #fff;
     border-radius: 50%;
+}
+
+.search{
+    background-color: #ccc;
 }
