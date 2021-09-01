@@ -1,8 +1,6 @@
 var root = new Vue({
     el: '#root',
-    data: {
-
-    },
+    data: data,
     methods: {
 
     },
