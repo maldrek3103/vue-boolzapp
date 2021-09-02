@@ -3,6 +3,7 @@ var root = new Vue({
 
     data: {
         newMessage: '',
+        contactsFilter: '',
         currentContact: 0,
         user: {
             name: 'Camillo Pisanu',
@@ -127,6 +128,19 @@ var root = new Vue({
             const messages = this.contacts[this.currentContact].messages;
 
             messages.push(newMessage);
+        },
+        filterContacts() {
+
+            const filter = this.contactsFilter.toLowerCase();
+
+            this.contacts.forEach((contact) => {
+                const contactName = contact.name.toLowerCase();
+                if (contactName.includes(filter)) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
         }
     },
 
