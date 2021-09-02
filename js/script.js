@@ -2,6 +2,7 @@ var root = new Vue({
     el: '#root',
 
     data: {
+        newMessage: '',
         currentContact: 0,
         user: {
             name: 'Camillo Pisanu',
@@ -96,6 +97,24 @@ var root = new Vue({
     methods: {
         setCurrentContact(index) {
             this.currentContact = index;
+        },
+        lastUserAccess() {
+            const messages = this.contacts[this.currentContact].messages;
+            const lastMessage = messages[messages.length - 1];
+            return lastMessage.date;
+        },
+        sendMessage() {
+            if (!this.newMessage) return;
+
+            const newMsg = {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                message: this.newMessage,
+                status: 'sent',
+            };
+
+            const messages = this.contacts[this.currentContact].messages;
+
+            messages.push(newMsg);
         }
     },
 
