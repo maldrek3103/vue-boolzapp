@@ -106,15 +106,27 @@ var root = new Vue({
         sendMessage() {
             if (!this.newMessage) return;
 
-            const newMsg = {
+            this.addMessage(this.newMessage, 'sent');
+
+            this.newMessage = '';
+
+            setTimeout(() => {
+
+                this.addMessage('ok', 'received');
+
+            }, 1000);
+        },
+        addMessage(text, status) {
+
+            const newMessage = {
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                message: this.newMessage,
-                status: 'sent',
+                message: text,
+                status: status,
             };
 
             const messages = this.contacts[this.currentContact].messages;
 
-            messages.push(newMsg);
+            messages.push(newMessage);
         }
     },
 
